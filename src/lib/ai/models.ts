@@ -70,13 +70,28 @@ const staticModels = {
     "qwen3-32b": groq("qwen/qwen3-32b"),
   },
   openRouter: {
-    "gpt-oss-20b:free": openrouter("openai/gpt-oss-20b:free"),
-    "qwen3-8b:free": openrouter("qwen/qwen3-8b:free"),
-    "qwen3-14b:free": openrouter("qwen/qwen3-14b:free"),
-    "qwen3-coder:free": openrouter("qwen/qwen3-coder:free"),
-    "deepseek-r1:free": openrouter("deepseek/deepseek-r1-0528:free"),
-    "deepseek-v3:free": openrouter("deepseek/deepseek-chat-v3-0324:free"),
-    "gemini-2.0-flash-exp:free": openrouter("google/gemini-2.0-flash-exp:free"),
+    // Current free models on OpenRouter (checked 2026-11-12); all support tools.
+    "ernie-5.5-flash:free": openrouter("baidu/ernie-5.5-flash-preview:free"),
+    "inkling-2-small:free": openrouter("thinkingmachines/inkling-2-small:free"),
+    "nemotron-3-ultra:free": openrouter(
+      "nvidia/nemotron-3-ultra-550b-a55b:free",
+    ),
+    "nemotron-3.5-super-vl:free": openrouter(
+      "nvidia/nemotron-3.5-super-vl:free",
+    ),
+    "nemotron-3.5-lightning:free": openrouter(
+      "nvidia/nemotron-3.5-lightning:free",
+    ),
+    "nemotron-3-nano-omni:free": openrouter(
+      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    ),
+    "gemma-4-31b:free": openrouter("google/gemma-4-31b-it:free"),
+    "gemma-4-26b-a4b:free": openrouter("google/gemma-4-26b-a4b-it:free"),
+    "dots-3-note:free": openrouter("dots-studio/dots-3-note-preview:free"),
+    "north-mini-code:free": openrouter("cohere/north-mini-code:free"),
+    "flint-v1.0:free": openrouter("recursive/flint-v1.0:free"),
+    "lfm-3-1.7b:free": openrouter("liquid/lfm-3-1.7b:free"),
+    "lfm-2.5-2.6b:free": openrouter("liquid/lfm-2.5-2.6b:free"),
   },
 };
 
@@ -85,11 +100,6 @@ const staticUnsupportedModels = new Set([
   staticModels.ollama["gemma3:1b"],
   staticModels.ollama["gemma3:4b"],
   staticModels.ollama["gemma3:12b"],
-  staticModels.openRouter["gpt-oss-20b:free"],
-  staticModels.openRouter["qwen3-8b:free"],
-  staticModels.openRouter["qwen3-14b:free"],
-  staticModels.openRouter["deepseek-r1:free"],
-  staticModels.openRouter["gemini-2.0-flash-exp:free"],
 ]);
 
 const staticSupportImageInputModels = {
@@ -147,10 +157,6 @@ registerFileSupport(staticModels.xai["grok-4-fast"], XAI_FILE_MIME_TYPES);
 registerFileSupport(staticModels.xai["grok-4"], XAI_FILE_MIME_TYPES);
 registerFileSupport(staticModels.xai["grok-3"], XAI_FILE_MIME_TYPES);
 registerFileSupport(staticModels.xai["grok-3-mini"], XAI_FILE_MIME_TYPES);
-registerFileSupport(
-  staticModels.openRouter["gemini-2.0-flash-exp:free"],
-  GEMINI_FILE_MIME_TYPES,
-);
 
 const openaiCompatibleProviders = openaiCompatibleModelsSafeParse(
   process.env.OPENAI_COMPATIBLE_DATA,
