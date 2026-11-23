@@ -1,3 +1,5 @@
+Upstream foundation for https://github.com/ARCAIDev/arcai which is code for www.imarc.ai. Files are not to be changed but used as a reference to ensure foundational code and features were used correctly.
+
 <img width="1184" height="576" alt="thumbnail" loading="lazy" src="https://github.com/user-attachments/assets/d6ba80ff-a62a-4920-b266-85c4a89d6076" />
 
 [![MCP Supported](https://img.shields.io/badge/MCP-Supported-00c853)](https://modelcontextprotocol.io/introduction)
