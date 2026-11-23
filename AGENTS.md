@@ -1,6 +1,8 @@
-# Repository Guidelines
+Upstream foundation for https://github.com/ARCAIDev/arcai which is code for www.imarc.ai. Files are not to be changed but used as a reference to ensure foundational code and features were used correctly. 
 
-## Project Structure & Module Organization
+## Repository Guidelines
+
+### Project Structure & Module Organization
 - App code lives in `src`.
   - `src/app` (Next.js routes, API, middleware)
   - `src/components` (UI; reusable components in PascalCase)
@@ -8,7 +10,7 @@
   - `src/hooks` (React hooks: `useX`)
 - Assets in `public/`. End‑to‑end tests in `tests/`. Scripts in `scripts/`. Docker files in `docker/`.
 
-## Build, Test, and Development Commands
+### Build, Test, and Development Commands
 - `pnpm dev` — Run the app locally (Next.js dev server).
 - `pnpm build` / `pnpm start` — Production build and run.
 - `pnpm lint` / `pnpm lint:fix` — ESLint + Biome checks and autofix.
